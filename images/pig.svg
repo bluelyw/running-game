@@ -1,0 +1,21 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- 脸部 -->
+  <ellipse cx="40" cy="48" rx="24" ry="20" fill="#FFD1DC"/>
+  <!-- 耳朵 -->
+  <ellipse cx="22" cy="22" rx="7" ry="10" fill="#FFD1DC"/>
+  <ellipse cx="58" cy="22" rx="7" ry="10" fill="#FFD1DC"/>
+  <!-- 鼻子 -->
+  <ellipse cx="40" cy="60" rx="10" ry="6" fill="#FFB6B6"/>
+  <ellipse cx="37" cy="60" rx="2" ry="3" fill="#E57373"/>
+  <ellipse cx="43" cy="60" rx="2" ry="3" fill="#E57373"/>
+  <!-- 眼睛（大眼睛+高光） -->
+  <ellipse cx="32" cy="48" rx="4" ry="6" fill="#222"/>
+  <ellipse cx="48" cy="48" rx="4" ry="6" fill="#222"/>
+  <ellipse cx="30.5" cy="46" rx="1" ry="2" fill="#fff"/>
+  <ellipse cx="46.5" cy="46" rx="1" ry="2" fill="#fff"/>
+  <!-- 腮红 -->
+  <ellipse cx="28" cy="56" rx="3" ry="1.5" fill="#FFB6B6"/>
+  <ellipse cx="52" cy="56" rx="3" ry="1.5" fill="#FFB6B6"/>
+  <!-- 微笑嘴巴 -->
+  <path d="M35 66 Q40 70 45 66" stroke="#E57373" stroke-width="2" fill="none"/>
+</svg>

@@ -1,0 +1,29 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- 脸部 -->
+  <ellipse cx="40" cy="48" rx="22" ry="18" fill="#98FB98"/>
+  <!-- 龙角 -->
+  <rect x="18" y="8" width="6" height="18" rx="3" fill="#FFD700" transform="rotate(-15 18 8)"/>
+  <rect x="56" y="8" width="6" height="18" rx="3" fill="#FFD700" transform="rotate(15 56 8)"/>
+  <!-- 龙须 -->
+  <path d="M18 65 Q10 70 18 75" stroke="#43A047" stroke-width="2" fill="none"/>
+  <path d="M62 65 Q70 70 62 75" stroke="#43A047" stroke-width="2" fill="none"/>
+  <!-- 耳朵 -->
+  <ellipse cx="24" cy="28" rx="5" ry="8" fill="#43A047"/>
+  <ellipse cx="56" cy="28" rx="5" ry="8" fill="#43A047"/>
+  <!-- 鼻子 -->
+  <ellipse cx="36" cy="60" rx="2" ry="1.5" fill="#43A047"/>
+  <ellipse cx="44" cy="60" rx="2" ry="1.5" fill="#43A047"/>
+  <!-- 鼻孔 -->
+  <ellipse cx="36" cy="61" rx="0.5" ry="0.8" fill="#222"/>
+  <ellipse cx="44" cy="61" rx="0.5" ry="0.8" fill="#222"/>
+  <!-- 眼睛（大眼睛+高光） -->
+  <ellipse cx="32" cy="48" rx="3" ry="5" fill="#222"/>
+  <ellipse cx="48" cy="48" rx="3" ry="5" fill="#222"/>
+  <ellipse cx="31" cy="46" rx="0.8" ry="1.5" fill="#fff"/>
+  <ellipse cx="47" cy="46" rx="0.8" ry="1.5" fill="#fff"/>
+  <!-- 腮红 -->
+  <ellipse cx="28" cy="56" rx="2" ry="1" fill="#7ED957"/>
+  <ellipse cx="52" cy="56" rx="2" ry="1" fill="#7ED957"/>
+  <!-- 微笑嘴巴 -->
+  <path d="M35 66 Q40 70 45 66" stroke="#43A047" stroke-width="2" fill="none"/>
+</svg>

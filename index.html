@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小小跑步王</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>小小跑步王</h1>
+    <div id="game-area">
+        <div class="track" id="track1">
+            <img src="images/pig.svg" alt="小猪" class="runner" id="runner1">
+        </div>
+        <div class="track" id="track2">
+            <img src="images/dragon.svg" alt="小龙" class="runner" id="runner2">
+        </div>
+        <div class="finish-line"></div>
+    </div>
+    <div id="controls">
+        <button id="btn1">玩家1 跑步 (A)</button>
+        <button id="btn2">玩家2 跑步 (L)</button>
+        <button id="resetBtn">重开一局</button>
+    </div>
+    <div id="winner"></div>
+    <div id="leaderboard">
+        <h2>🏆 排行榜</h2>
+        <div id="leaderboard-content">
+            <div class="leaderboard-item">
+                <span class="rank">1</span>
+                <span class="player">小猪</span>
+                <span class="wins">0</span>
+            </div>
+            <div class="leaderboard-item">
+                <span class="rank">2</span>
+                <span class="player">小龙</span>
+                <span class="wins">0</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
