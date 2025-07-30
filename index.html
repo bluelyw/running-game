@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>小小跑步王</title>
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ERJQSXTBGE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-ERJQSXTBGE');
+    </script>
 </head>
 <body>
     <h1>小小跑步王</h1>
@@ -39,5 +48,98 @@
         </div>
     </div>
     <script src="script.js"></script>
+    
+    <!-- GA4 Event Tracking -->
+    <script>
+        // 页面浏览事件
+        gtag('event', 'page_view', {
+            page_title: '小小跑步王',
+            page_location: window.location.href
+        });
+        
+        // 点击事件跟踪
+        document.addEventListener('click', function(e) {
+            let eventName = 'click';
+            let eventCategory = 'engagement';
+            let eventLabel = e.target.tagName.toLowerCase();
+            
+            // 特定按钮点击跟踪
+            if (e.target.id === 'btn1') {
+                eventName = 'player1_click';
+                eventCategory = 'game_action';
+                eventLabel = '玩家1跑步按钮';
+            } else if (e.target.id === 'btn2') {
+                eventName = 'player2_click';
+                eventCategory = 'game_action';
+                eventLabel = '玩家2跑步按钮';
+            } else if (e.target.id === 'resetBtn') {
+                eventName = 'reset_game';
+                eventCategory = 'game_action';
+                eventLabel = '重开一局按钮';
+            } else if (e.target.closest('#leaderboard')) {
+                eventName = 'leaderboard_interaction';
+                eventCategory = 'game_action';
+                eventLabel = '排行榜交互';
+            }
+            
+            gtag('event', eventName, {
+                event_category: eventCategory,
+                event_label: eventLabel,
+                value: 1
+            });
+        });
+        
+        // 键盘事件跟踪
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'a' || e.key === 'A') {
+                gtag('event', 'keyboard_action', {
+                    event_category: 'game_action',
+                    event_label: '玩家1键盘控制(A键)',
+                    value: 1
+                });
+            } else if (e.key === 'l' || e.key === 'L') {
+                gtag('event', 'keyboard_action', {
+                    event_category: 'game_action',
+                    event_label: '玩家2键盘控制(L键)',
+                    value: 1
+                });
+            }
+        });
+        
+        // 滚动事件跟踪
+        let scrollTracked = false;
+        window.addEventListener('scroll', function() {
+            if (!scrollTracked) {
+                const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+                
+                if (scrollPercent >= 90) {
+                    gtag('event', 'scroll_to_bottom', {
+                        event_category: 'engagement',
+                        event_label: '滚动到底部',
+                        value: scrollPercent
+                    });
+                    scrollTracked = true;
+                }
+            }
+        });
+        
+        // 游戏胜利事件跟踪（在script.js中调用）
+        window.trackGameWin = function(winner) {
+            gtag('event', 'game_win', {
+                event_category: 'game_result',
+                event_label: winner + '获胜',
+                value: 1
+            });
+        };
+        
+        // 游戏重置事件跟踪（在script.js中调用）
+        window.trackGameReset = function() {
+            gtag('event', 'game_reset', {
+                event_category: 'game_action',
+                event_label: '游戏重置',
+                value: 1
+            });
+        };
+    </script>
 </body>
 </html> 

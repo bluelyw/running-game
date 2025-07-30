@@ -44,6 +44,11 @@ function announceWinner(player) {
         leaderboard.dragon.wins++;
     }
     updateLeaderboard();
+    
+    // GA4 游戏胜利事件跟踪
+    if (window.trackGameWin) {
+        window.trackGameWin(name);
+    }
 }
 
 function updateLeaderboard() {
@@ -72,6 +77,11 @@ function resetGame() {
     runner2.style.left = '0px';
     winnerDiv.innerHTML = '';
     gameOver = false;
+    
+    // GA4 游戏重置事件跟踪
+    if (window.trackGameReset) {
+        window.trackGameReset();
+    }
 }
 
 btn1.addEventListener('click', () => moveRunner(runner1, 1));
